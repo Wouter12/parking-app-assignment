@@ -1,0 +1,18 @@
+<table *ngIf=parkings>
+    <thead>
+        <img src="assets\parking.jpeg"> route
+    </thead>
+    <tr *ngFor="let parking of parkings">
+        <td>{{parking.description}}</td>
+        <td>{{parking.name.split(' ',1)}}</td>
+        <td *ngIf="parking.parkingStatus.suggestedCapacity=='ACTUAL'">
+            {{parking.parkingStatus.availableCapacity}}
+        </td>
+        <td *ngIf="parking.parkingStatus.suggestedCapacity=='FULL'">
+                VOL
+            </td>
+            <td *ngIf="parking.parkingStatus.suggestedCapacity=='FREE'">
+                    VRIJ
+                </td>
+    </tr>
+</table>
