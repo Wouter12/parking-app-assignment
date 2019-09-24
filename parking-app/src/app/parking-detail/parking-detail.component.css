@@ -1,0 +1,10 @@
+.container{
+    background-color:#262626;
+    color: white;
+    width: 96%;
+    margin: 2%;
+}
+
+table tr td{
+    font-size: 1em;
+}

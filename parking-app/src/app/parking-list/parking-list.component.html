@@ -1,15 +1,15 @@
 <div class="table-container ng-container">
+    <div>
+        <span><img src="assets\parking-symbol.png">route</span>
+    </div>
     <table *ngIf=parkings>
-        <thead>
-            <img src="assets\parking-symbol.png"> route
-        </thead>
         <tr class="row" *ngFor="let parking of parkings">
-            <td>{{parking.description}}</td>
+            <td><a href="/parking/{{parking.id}}">{{parking.description}}</a></td>
             <td>{{parking.name.split(' ',1)}}</td>
-            <td  *ngIf="parking.parkingStatus.suggestedCapacity=='ACTUAL'">
+            <td *ngIf="parking.parkingStatus.suggestedCapacity=='ACTUAL'">
                 <div class="status status-actual">{{parking.parkingStatus.availableCapacity}}</div>
             </td>
-            <td  *ngIf="parking.parkingStatus.suggestedCapacity=='FULL'">
+            <td *ngIf="parking.parkingStatus.suggestedCapacity=='FULL'">
                 <div class="status status-full">VOL</div>
             </td>
             <td *ngIf="parking.parkingStatus.suggestedCapacity=='FREE'">

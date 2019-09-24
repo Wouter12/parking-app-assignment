@@ -7,6 +7,10 @@
     height: 100vh;
 }
 
+span{
+    font-size: 3em;
+}
+
 table{
     width: 98%;
     border-collapse: collapse;
@@ -15,13 +19,12 @@ table{
 
 thead{
     border-bottom: 1px solid white;
-    font-size: 150px;
-    height: 168px;
 }
 
-thead img{
-    margin-top: auto;
-    height: 168px;
+img{
+    height: 2em;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 @font-face{
@@ -39,7 +42,7 @@ thead img{
     margin: 3px;
     padding: 10px;
     text-align: center;
-    width: 130px;
+    max-width: 130px;
     border-radius: 5px;
 }
 .status-full{
@@ -48,7 +51,7 @@ thead img{
     margin: 3px;
     padding: 10px;
     text-align: center;
-    width: 130px;
+    max-width: 130px;
     border-radius: 5px;
 
 }
@@ -58,7 +61,7 @@ thead img{
     margin: 3px;
     padding: 10px;
     text-align: center;
-    width: 130px;
+    max-width: 130px;
     border-radius: 5px;
 }
 
@@ -66,5 +69,11 @@ thead img{
     margin:5px;
     border-bottom: 1px solid white;
     height: 80px;
-    font-size: 50px;
+    font-size: 2em;
+}
+
+td a {
+    text-decoration: none;
+    color: white;
+
 }

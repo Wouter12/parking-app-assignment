@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ParkingListComponent } from './parking-list/parking-list.component';
 import { HttpClientModule, HttpClientJsonpModule }    from '@angular/common/http';
+import { ParkingDetailComponent } from './parking-detail/parking-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParkingListComponent
+    ParkingListComponent,
+    ParkingDetailComponent
   ],
   imports: [
     BrowserModule,
