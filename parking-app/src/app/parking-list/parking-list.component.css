@@ -1,3 +1,70 @@
-body{
+.table-container{
+    background-color:#262626;
+    color: white;
+    align-content: center;
+    align-self: center;
+    width: 100%;
+    height: 100vh;
+}
+
+table{
+    width: 98%;
+    border-collapse: collapse;
+    margin: 0 1%;
+}
+
+thead{
+    border-bottom: 1px solid white;
+    font-size: 150px;
+    height: 168px;
+}
+
+thead img{
+    margin-top: auto;
+    height: 168px;
+}
+
+@font-face{
+    font-family: subway-ticker;
+    src: url(/assets/fonts/SubwayTicker.ttf) format("truetype");
+}
+
+.status{
+    font-family: 'subway-ticker';
+}
+
+.status-free{
+    color: green;
     background-color: black;
+    margin: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+}
+.status-full{
+    color: red;
+    background-color: black;
+    margin: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+
+}
+.status-actual{
+    background-color: black;
+    color: white;
+    margin: 3px;
+    padding: 10px;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+}
+
+.row td {
+    margin:5px;
+    border-bottom: 1px solid white;
+    height: 80px;
+    font-size: 50px;
 }

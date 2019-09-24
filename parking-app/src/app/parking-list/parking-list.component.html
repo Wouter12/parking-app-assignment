@@ -1,18 +1,20 @@
-<table *ngIf=parkings>
-    <thead>
-        <img src="assets\parking.jpeg"> route
-    </thead>
-    <tr *ngFor="let parking of parkings">
-        <td>{{parking.description}}</td>
-        <td>{{parking.name.split(' ',1)}}</td>
-        <td *ngIf="parking.parkingStatus.suggestedCapacity=='ACTUAL'">
-            {{parking.parkingStatus.availableCapacity}}
-        </td>
-        <td *ngIf="parking.parkingStatus.suggestedCapacity=='FULL'">
-                VOL
+<div class="table-container ng-container">
+    <table *ngIf=parkings>
+        <thead>
+            <img src="assets\parking-symbol.png"> route
+        </thead>
+        <tr class="row" *ngFor="let parking of parkings">
+            <td>{{parking.description}}</td>
+            <td>{{parking.name.split(' ',1)}}</td>
+            <td  *ngIf="parking.parkingStatus.suggestedCapacity=='ACTUAL'">
+                <div class="status status-actual">{{parking.parkingStatus.availableCapacity}}</div>
+            </td>
+            <td  *ngIf="parking.parkingStatus.suggestedCapacity=='FULL'">
+                <div class="status status-full">VOL</div>
             </td>
             <td *ngIf="parking.parkingStatus.suggestedCapacity=='FREE'">
-                    VRIJ
-                </td>
-    </tr>
-</table>
+                <div class="status status-free">Vrij</div>
+            </td>
+        </tr>
+    </table>
+</div>
