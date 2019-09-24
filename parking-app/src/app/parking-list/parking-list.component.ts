@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from '../data-service.service';
 import { parking } from '../parking';
-
+import { interval } from 'rxjs';
+import {startWith, switchMap} from "rxjs/operators";
 @Component({
   selector: 'app-parking-list',
   templateUrl: './parking-list.component.html',
@@ -9,11 +10,15 @@ import { parking } from '../parking';
 })
 export class ParkingListComponent implements OnInit {
 
-  parkings: parking[];
+  parkings: parking[]
   constructor(private data: DataServiceService) { }
 
   ngOnInit() {
-    this.data.getParkings().subscribe(data=>{
+    interval(5000)
+    .pipe(
+      startWith(0),
+      switchMap(()=>this.data.getParkings())
+    ).subscribe(data=>{
       this.addParkings(data);
     });
   }
