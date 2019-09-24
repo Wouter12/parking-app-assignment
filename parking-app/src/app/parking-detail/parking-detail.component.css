@@ -8,3 +8,7 @@
 table tr td{
     font-size: 1em;
 }
+agm-map{
+    height: 800px;
+    width: 80%;
+}

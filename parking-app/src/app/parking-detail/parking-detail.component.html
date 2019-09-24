@@ -1,5 +1,5 @@
 <div class="container">
-    <table>
+    <table *ngIf=parking>
         <tr>
             <td>naam:</td>
             <td>{{parking.description}}</td>
@@ -18,4 +18,13 @@
         </tr>
     </table>
 </div>
+
 <button><a href=''>back</a></button>
+<agm-map *ngIf=parking
+[latitude]="parking.latitude"
+[longitude]="parking.longitude"
+[zoom]="20" >
+  <agm-marker 
+  [latitude]="parking.latitude" 
+  [longitude]="parking.longitude"></agm-marker>
+</agm-map>
